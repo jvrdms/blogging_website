@@ -1,0 +1,11 @@
+{
+  "name": "Blog Container",
+  // Pull latest alpine image
+  "image": "alpine:latest",
+  // Set container working directory to /workspace
+  "workspaceFolder": "/workspace",
+  // Bind the current workspace folder on the host to /workspace in the container
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  // Install git, nodejs
+  "postCreateCommand": "apk add --no-cache git nodejs"
+}
