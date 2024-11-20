@@ -6,6 +6,6 @@
   "workspaceFolder": "/workspace",
   // Bind the current workspace folder on the host to /workspace in the container
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  // Install git, nodejs
-  "postCreateCommand": "apk add --no-cache git nodejs"
+  // Install ssh, git, nodejs and npm packages
+  "postCreateCommand": "apk add --no-cache openssh git nodejs npm"
 }
